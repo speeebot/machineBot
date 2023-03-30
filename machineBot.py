@@ -8,8 +8,8 @@ load_dotenv()
 bot_token = os.getenv('DISCORD_TOKEN')
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-intents = discord.Intents.all()
-#intents.message_content = True
+intents = discord.Intents.default()
+intents.message_content = True
 
 client = discord.Client(intents=intents)
 
